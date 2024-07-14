@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "3b51ce46-80e5-4211-9931-855a19b5f998",
+		"name": "ApiSecurityWithOkta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32306188"
+	},
+	"item": [
+		{
+			"name": "https://dev-23314310.okta.com/oauth2/default/v1/token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "apiScope",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "0oaibvrfjeWci2Q4z5d7",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "beCvK0lq4Xmgg6-PT9lG9OvrCzYZY83ZUlx6wlYM1Sn9PjBrhwjJEJSbtv4oAsW-",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev-23314310.okta.com/oauth2/default/v1/token",
+					"protocol": "https",
+					"host": [
+						"dev-23314310",
+						"okta",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"default",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiJQcGJENzhwSzBLemZycktvNjhpNUJvdVdDdjFHdTIyd3JLRTRnaE9ESjdzIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjBoNWtERWFTa0FLdnR2MUx4bk45RnZXMVl4SlVrX0lmLVM5UkdIcFFFOEEiLCJpc3MiOiJodHRwczovL2Rldi0yMzMxNDMxMC5va3RhLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE3MjA5NjE5MzMsImV4cCI6MTcyMDk2NTUzMywiY2lkIjoiMG9haWJ2cmZqZVdjaTJRNHo1ZDciLCJzY3AiOlsiYXBpU2NvcGUiXSwic3ViIjoiMG9haWJ2cmZqZVdjaTJRNHo1ZDcifQ.EY0K1lM7k1srxFWtFsIUQ1780xskm-A6HXijAltlLHYDSxrX0Bp5DKupzBG8V59h701718CwZa8-epaFcP3FrShUBBZb5VqnrILi2bwgLytAH5KwpVEC7YSAQL3qUGoONusw2S4CAhpF0nW2yOBNWL8m53Cu87Cm8lWd7-G_vXtYuoQWmOgPDR5AE7ToeKflMnYljI2oLn1sFE3IK3b0rQvp_2BeDgrp5ufjgbF8V57EeaRPyT6jHspuImKBwypLd8N5Aa4XDoF_umjsZ9JJ1Z-gGsJef1CmQ24uojEWxdpMgrecl0CaHcywdm-fcVyYoStOp5xS1AH9dc8u_0smxA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
